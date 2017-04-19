@@ -16,7 +16,7 @@
 
 //////////////////////////VARIABLES
 var map;
-var infowindow;
+//var infowindow;
 // Create a new blank array for all the listing markers.
 var markers = [];
   console.log("Markers Array:")
@@ -41,38 +41,45 @@ function initMap() {
   /* !!! SECOND ASSIGNMENT */
   var infowindow = new google.maps.InfoWindow();
 
-/*//////////////////////////GEOLOCATION
-  if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(function(position) {
-        var pos = {
-          lat: position.coords.latitude,
-          lng: position.coords.longitude
-        };
+getLocation();
+//////////////////////////GEOLOCATION
+  function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function(position) {
+          var pos = {
+            lat: position.coords.latitude,
+            lng: position.coords.longitude
+          };
 
-        infoWindow.setPosition(pos);
-        infoWindow.setContent('Location found.');
-        infoWindow.open(map);
-        map.setCenter(pos);
-      }, function() {
-        handleLocationError(true, infoWindow, map.getCenter());
-      });
-    } else {
-      // Browser doesn't support Geolocation
-      handleLocationError(false, infoWindow, map.getCenter());
+          infowindow.setPosition(pos);
+          infowindow.setContent('You are here');
+          infowindow.open(map);
+          map.setCenter(pos);
+          ///////user location
+          userLocation = pos;
+        }, function() {
+          handleLocationError(true, infowindow, map.getCenter());
+        });
+      } else {
+        // Browser doesn't support Geolocation
+        handleLocationError(false, infowindow, map.getCenter());
+      }
     }
-  }
 
 //////////////////////////GEOLOCATION ERROR HANDLING
   function handleLocationError(browserHasGeolocation, infoWindow, pos) {
-    infoWindow.setPosition(pos);
-    infoWindow.setContent(browserHasGeolocation ?
+    infowindow.setPosition(pos);
+    infowindow.setContent(browserHasGeolocation ?
                           'Error: The Geolocation service failed.' :
                           'Error: Your browser doesn\'t support geolocation.');
-    infoWindow.open(map);
+    infowindow.open(map);
   }
-*/
+
+
+
   /*!!! NEED TO UPDATE USING USER GEOLOCATION OR INPUT*/
   var userLocation = {lat: 42.280826, lng: -83.743038};
+  //var userLocation = getLocation();
   //var userLocation = document.getElementById('zoom-to-area-text').value;
 
 //////////////////////////AUTO COMPLETE
@@ -143,6 +150,11 @@ function initMap() {
 
 ////////////////
       infowindow.setContent('<div class="infoWindow"><div class="placeName">'+place.name+'</div><div class="placeVicinity">'+place.vicinity+'</div></div>');
+      /*
+      infowindow.InfoWindowOptions = {
+        content:'<div class="infoWindow"><div class="placeName">'+place.name+'</div><div class="placeVicinity">'+place.vicinity+'</div></div>'
+      };
+      */
       infowindow.open(map, this);
     });
   }//////////////////////////END CREATEMARKER()
