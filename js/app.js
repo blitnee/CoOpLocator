@@ -1,5 +1,6 @@
 var map;
 var markers = [];
+var infowindow;
 /* Blank array to hold all the listing markers for use in multiple functions,
  * and have control of the number of places that show
  */
@@ -15,10 +16,10 @@ function initMap() {
     zoom: 13,
     mapTypeControl: false
   });
-  //getLocation();
+  getLocation();
 
   //INFO WINDOW
-  var infowindow = new google.maps.InfoWindow();
+  infowindow = new google.maps.InfoWindow();
 
   //DEFINE USER LOCATION
   /*!!! NEED TO UPDATE USING USER GEOLOCATION OR INPUT*/
