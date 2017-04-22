@@ -1,7 +1,7 @@
 
 html,
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Roboto', sans-serif;
   height: 100%;
   margin: 0;
   padding: 0;
@@ -17,10 +17,14 @@ input {
 }
 
 h1 {
-  color: #525454;
-  font-size: 22px;
+  font-family: 'Bungee Inline', cursive;
   margin: 0 0 10px 0;
   text-align: center;
+}
+
+#header {
+  background-color: #427fed;
+  color: #fff;
 }
 
 #heading {
@@ -30,25 +34,25 @@ h1 {
 }
 
 #title {
-  font-size: 20px;
+  font-size: 30px;
   width: 100%;
+  text-shadow: 2px 3px 2px #000;
 }
 
 .fa-bars {
   float: right;
   padding-right: 1.5em;
-  color: #525454;
+  text-shadow: 2px 3px 2px #000;
 }
 
 .fa-bars:hover {
-  color: #b8c5d1;
+  color: lightblue;
 }
 
 #drawer {
   z-index: 1;
-  background: #fff;
-  border: 1px solid #525454;
-  border-radius: 2px;
+  color: #fff;
+  background: #427fed;
   height: 100%;
   padding: 20px 10px 30px 10px;
   text-align: left;
