@@ -2,6 +2,7 @@
 html,
 body {
   font-family: 'Roboto', sans-serif;
+  font-size: 15px;
   height: 100%;
   margin: 0;
   padding: 0;
@@ -23,8 +24,12 @@ h1 {
 }
 
 #header {
-  background-color: #427fed;
   color: #fff;
+  background: #4777e0; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(#4777e0, #1c4bb5); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#4777e0, #1c4bb5); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#4777e0, #1c4bb5); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#4777e0, #1c4bb5); /* Standard syntax (must be last) */
 }
 
 #heading {
@@ -46,13 +51,13 @@ h1 {
 }
 
 .fa-bars:hover {
-  color: lightblue;
+  color: #3f6aca;
 }
 
 #drawer {
   z-index: 1;
   color: #fff;
-  background: #427fed;
+  background: #3f6aca;
   height: 100%;
   padding: 20px 10px 30px 10px;
   text-align: left;
@@ -68,6 +73,27 @@ h1 {
   transform: translate(0, 0);
 }
 
+.button {
+  color: #000000;
+  background: #ff4947;
+  border-style: none;
+  border-radius: 5px;
+  box-shadow: 0.5px 0.5px 0.5px black;
+}
+
+.text__block {
+  padding-bottom: .5em;
+}
+
+.text {
+  font-size: 14px;
+}
+
+.searchbox {
+  border-style: none;
+  border-radius: 5px;
+  padding: 2.5px;
+}
 
 hr {
   background: #D0D7D9;
@@ -82,14 +108,9 @@ hr {
   position: absolute;
 }
 
-
 #places-search,
 #search-within-time-text {
   width: 84%;
-}
-
-.text {
-  font-size: 12px;
 }
 
 #toggle-drawing {

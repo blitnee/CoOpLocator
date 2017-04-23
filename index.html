@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" type="text/css" href="css/styles.css">
-    <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Bungee+Inline|Roboto" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
   </head>
   <body>
     <div class="container">
@@ -17,27 +16,36 @@
       <!-- Navigation Menu -->
       <nav id="drawer" class="nav-box">
         <div>
-          <input id="zoom-to-area-text" type="text" placeholder="Ex: Ann Arbor, MI or 48104">
-          <input id="zoom-to-area" type="button" value="Go">
+          <div class="text__block">
+            <span class="text"> Enter A City: </span>
+          </div>
+          <div class="text__block">
+            <input id="zoom-to-area-text" class="searchbox" type="text" placeholder="Ex: Ann Arbor, MI or 48104">
+            <input id="zoom-to-area" class="button" type="button" value="Go">
+          </div>
         </div>
         <hr>
         <div>
-          <span class="text"> Within </span>
-          <select id="max-duration">
-            <option value="10">10 min</option>
-            <option value="15">15 min</option>
-            <option value="30">30 min</option>
-            <option value="60">1 hour</option>
-          </select>
-          <select id="mode">
-            <option value="DRIVING">drive</option>
-            <option value="WALKING">walk</option>
-            <option value="BICYCLING">bike</option>
-            <option value="TRANSIT">transit ride</option>
-          </select>
-          <span class="text">of</span>
-          <input id="search-within-time-text" type="text" placeholder="Ex: Google Office NYC or 75 9th Ave, New York, NY">
-          <input id="search-within-time" type="button" value="Go">
+          <div class="text__block">
+            <span class="text"> Within </span>
+            <select id="max-duration">
+              <option value="10">10 min</option>
+              <option value="15">15 min</option>
+              <option value="30">30 min</option>
+              <option value="60">1 hour</option>
+            </select>
+            <select id="mode">
+              <option value="DRIVING">drive</option>
+              <option value="WALKING">walk</option>
+              <option value="BICYCLING">bike</option>
+              <option value="TRANSIT">transit ride</option>
+            </select>
+            <span class="text">of</span>
+          </div>
+          <div class="text__block">
+            <input id="search-within-time-text" class="searchbox" type="text" placeholder="Ex: Google Office NYC or 75 9th Ave, New York, NY">
+            <input id="search-within-time" class="button" type="button" value="Go">
+          </div>
         </div>
         <!-- List results -->
         <div id="resultsList">
@@ -69,6 +77,8 @@
     <script async defer
         src="https://maps.googleapis.com/maps/api/js?libraries=places&key=https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyBNu4wYZMuFE3_g6wUqvhLkJI79R8L5xH0&callback=initMap"></script>
     <script async src="js/app.js"></script>
-
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Bungee+Inline|Roboto" rel="stylesheet">
   </body>
 </html>
