@@ -203,8 +203,6 @@ function initMap() {
     }
 ]
 
-
-
   map = new google.maps.Map(document.getElementById('map'), {
     center: {lat: 42.280826, lng: -83.743038},
     zoom: 13,
